@@ -81,16 +81,7 @@
                         alert("Nao foi possivel salvar. Erro: " + error);
                     } else {
                         var authData = ref.getAuth();
-                        ref.child("fornecedores").child(authData.uid).child("produtos").set({                            
-                            [produto.key()]: true
-                        }, function (error) {
-                            $("#load").css("display", "none");
-                            if (error) {
-                                alert("Nao foi possivel salvar. Erro: " + error);
-                            } else {
-                                alert("Seus dados foram salvos!");
-                            }
-                        });
+                        ref.child("fornecedores").child(authData.uid).child("produtos").child(produto.key()).set(true);
                     }
                 });
             }
