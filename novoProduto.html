@@ -73,7 +73,7 @@
                 produto.set({
                     nome: $("#nome").val(),
                     descricao: $("#descricao").val(),
-                    preco: $("#preco").val(),
+                    preco: $("#preco").val().replace(",", "."),
                     foto: $("#arquivoProduto").val().replace(/ /g, "").toLowerCase(),
                 }, function (error) {
                     $("#load").css("display", "none");
