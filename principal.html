@@ -211,12 +211,12 @@
         }
         var ref = new Firebase("https://nasuakz.firebaseio.com/");
         var authData = ref.getAuth();
-        if (authData) {
+        if (ref.getAuth()) {
             $(function () {
-                $("#grid").load("produtos.html");
+                console.log("tá logado");
             });
         } else {
-            console.log("User is logged out");
+            console.log("não tá logado");
         }
         </script>
         <script src="js/jquery-1.11.2.min.js"></script>
