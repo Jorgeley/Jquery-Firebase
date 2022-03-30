@@ -1,5 +1,6 @@
 {
     "require": {
-        "kreait/firebase-php": "^2.0@beta"
+        "kreait/firebase-php": "^5.0.0",
+        "guzzlehttp/psr7": "1.8.4"
     }
 }
